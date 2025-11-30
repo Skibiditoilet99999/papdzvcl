@@ -5,17 +5,54 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "papdzvcl"
 version = "1.0.0"
-description = "HTTP Client cực chất với Ok1, Ok2, Ok3"
+description = "HTTP Client cực chất với phương thức Ok1, Ok2, Ok3 - Very Cool Library!"
 authors = [
     {name = "PAPDZ VCL Team", email = "papdzvcl@example.com"},
 ]
 readme = "README.md"
 license = {text = "MIT"}
+keywords = ["http", "client", "requests", "api", "ok1", "ok2", "ok3"]
 classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
 dependencies = [
     "requests>=2.25.0",
 ]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov",
+    "pytest-asyncio",
+    "black",
+    "flake8",
+    "mypy",
+    "twine",
+    "build",
+]
+async = [
+    "aiohttp>=3.8.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Skibiditoilet99999/papdzvcl"
+"Documentation" = "https://github.com/Skibiditoilet99999/papdzvcl#readme"
+"Bug Reports" = "https://github.com/Skibiditoilet99999/papdzvcl/issues"
+"Source" = "https://github.com/Skibiditoilet99999/papdzvcl"
+
+[tool.black]
+line-length = 88
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311', 'py312']
